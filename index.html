@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ultimate Balloon Game 🎈</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="start-screen">
+
+    <h1>🎈 Ultimate Balloon Game 🎮</h1>
+
+    <button id="start-btn">Jouer</button>
+
+</div>
+
+<div id="game-container">
+
+    <div class="scoreboard">
+
+        <div>Score: <span id="score">0</span></div>
+
+        <div>Temps: <span id="timer">60</span>s</div>
+
+        <div>Meilleur score: <span id="high-score">0</span></div>
+
+    </div>
+
+    <div id="message"></div>
+
+    <audio id="pop-sound" src="https://www.soundjay.com/button/beep-07.mp3"></audio>
+
+    <audio id="background-music" src="https://www.soundjay.com/button/beep-10.mp3" loop></audio>
+
+    <div id="game-over">
+
+        <h1>Temps écoulé !</h1>
+
+        <p>Score final : <span id="final-score">0</span></p>
+
+        <button onclick="restartGame()">Rejouer</button>
+
+    </div>
+
+    <button id="theme-toggle">Mode Nuit/Jour</button>
+
+</div>
+
+
+<div class="cloud cloud1"></div>  
+
+<div class="cloud cloud2"></div>    <div class="particle particle1"></div>  
+
+<div class="particle particle2"></div>  
+
+<div class="particle particle3"></div>  
+
+<div class="particle particle4"></div>  
+
+<div class="particle particle5"></div>  <audio autoplay id="peace" loop  
+
+src="https://www.dropbox.com/scl/fi/8j0dld99gmj1ud6e1s8ym/ReelAudio-89451.mp3?rlkey=ok9g7yolxyuc9351y58et7jkc&st=2g6mhamc&dl=1">
+
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

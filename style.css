@@ -1,0 +1,448 @@
+/* Style global */
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: 'Arial', sans-serif;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: linear-gradient(to bottom, #87CEEB, #FFD700);
+
+    transition: background 0.5s ease;
+
+}
+
+body.night {
+
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+
+}
+
+/* Écran de démarrage */
+
+#start-screen {
+
+    text-align: center;
+
+    color: #fff;
+
+}
+
+#start-btn {
+
+    padding: 10px 20px;
+
+    font-size: 1.5rem;
+
+    background: #FF4500;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+#start-btn:hover {
+
+    background: #FF6347;
+
+}
+
+/* Tableau des scores */
+
+.scoreboard {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    font-size: 20px;
+
+    color: #fff;
+
+}
+
+#message {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 2rem;
+
+    color: #FFD700;
+
+    display: none;
+
+}
+
+/* 🌟 Styles globaux */
+body {
+
+  margin: 0;
+
+  padding: 0;
+
+  background: linear-gradient(to bottom, #74EBD5, #9FACE6);
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+/* 🎈 Ballons */
+
+.balloon {
+
+  position: absolute;
+
+  width: 80px;
+
+  height: 100px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  animation: float 10s linear infinite;
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+}
+
+/* ✨ Variations des couleurs des ballons */
+
+.balloon1 { background: radial-gradient(circle, #ff1493, #ff69b4); }
+
+.balloon2 { background: radial-gradient(circle, #00bfff, #87cefa); }
+
+.balloon3 { background: radial-gradient(circle, #ff4500, #ff8c00); }
+
+.balloon4 { background: radial-gradient(circle, #32cd32, #7cfc00); }
+
+.balloon5 { background: radial-gradient(circle, #ffd700, #ffff00); }
+
+/* 🧵 Ficelle du ballon */
+
+.balloon::before {
+
+  content: '';
+
+  position: absolute;
+
+  bottom: -10px;
+
+  left: 50%;
+
+  width: 2px;
+
+  height: 50px;
+
+  background: #000;
+
+  transform: translateX(-50%);
+
+}
+
+/* 🎀 Ombre sous le ballon */
+
+.balloon::after {
+
+  content: '';
+
+  position: absolute;
+
+  bottom: -60px;
+
+  left: 50%;
+
+  width: 10px;
+
+  height: 10px;
+
+  background: #000;
+
+  border-radius: 50%;
+
+  transform: translateX(-50%);
+
+}
+
+/* 🆙 Animation de montée des ballons */
+
+@keyframes float {
+
+  0% {
+
+      transform: translateY(100vh);
+
+      opacity: 1;
+
+  }
+
+  100% {
+
+      transform: translateY(-10vh);
+
+      opacity: 1;
+
+  }
+
+}
+
+/* 💥 Animation d'explosion */
+
+@keyframes pop {
+
+  0% { transform: scale(1); opacity: 1; }
+
+  50% { transform: scale(1.2); opacity: 0.7; }
+
+  100% { transform: scale(0); opacity: 0; }
+
+}
+
+/* 💢 Classe appliquée après un clic */
+
+.balloon.pop {
+
+  animation: pop 0.3s ease-in-out forwards;
+
+}
+
+
+  
+  .cloud {  
+  
+    position: absolute;  
+  
+    background: white;  
+  
+    border-radius: 50%;  
+  
+    opacity: 0.8;  
+  
+    animation: drift 20s infinite linear;  
+  
+  }  
+  
+  .cloud::before, .cloud::after {  
+  
+    content: '';  
+  
+    position: absolute;  
+  
+    background: white;  
+  
+    border-radius: 50%;  
+  
+  }  
+  
+  .cloud1 {  
+  
+    width: 150px;  
+  
+    height: 60px;  
+  
+    top: 20%;  
+  
+    left: 10%;  
+  
+  }  
+  
+  .cloud1::before {  
+  
+    width: 80px;  
+  
+    height: 80px;  
+  
+    top: -30px;  
+  
+    left: 20px;  
+  
+  }  
+  
+  .cloud1::after {  
+  
+    width: 60px;  
+  
+    height: 60px;  
+  
+    top: -20px;  
+  
+    left: 80px;  
+  
+  }  
+  
+  .cloud2 {  
+  
+    width: 200px;  
+  
+    height: 80px;  
+  
+    top: 50%;  
+  
+    left: 50%;  
+  
+  }  
+  
+  .cloud2::before {  
+  
+    width: 100px;  
+  
+    height: 100px;  
+  
+    top: -40px;  
+  
+    left: 30px;  
+  
+  }  
+  
+  .cloud2::after {  
+  
+    width: 70px;  
+  
+    height: 70px;  
+  
+    top: -30px;  
+  
+    left: 120px;  
+  
+  }  
+  
+  @keyframes drift {  
+  
+    0% { transform: translateX(-100%); }  
+  
+    100% { transform: translateX(100%); }  
+  
+  }  
+  
+  .particle {  
+  
+    position: absolute;  
+  
+    background: rgba(255, 255, 255, 0.7);  
+  
+    border-radius: 50%;  
+  
+    animation: floatParticle 5s infinite ease-in-out;  
+  
+  }  
+  
+  @keyframes floatParticle {  
+  
+    0% { transform: translateY(0) translateX(0); }  
+  
+    50% { transform: translateY(-20px) translateX(20px); }  
+  
+    100% { transform: translateY(0) translateX(0); }  
+  
+  }  
+  
+  .particle1 { width: 5px; height: 5px; top: 10%; left: 20%; }  
+  
+  .particle2 { width: 7px; height: 7px; top: 30%; left: 70%; }  
+  
+  .particle3 { width: 6px; height: 6px; top: 50%; left: 40%; }  
+  
+  .particle4 { width: 8px; height: 8px; top: 70%; left: 60%; }  
+  
+  .particle5 { width: 5px; height: 5px; top: 90%; left: 10%; }  
+  
+  .score {  
+  
+    position: absolute;  
+  
+    top: 20px;  
+  
+    left: 20px;  
+  
+    font-size: 24px;  
+  
+    color: white;  
+  
+    font-family: Arial, sans-serif;  
+  
+  }
+  
+/* Écran de fin */
+
+#game-over {
+
+    display: none;
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(0, 0, 0, 0.8);
+
+    color: #fff;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+}
+
+#theme-toggle {
+
+    position: fixed;
+
+    bottom: 10px;
+
+    right: 10px;
+
+    padding: 10px;
+
+    background: #FF4500;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
